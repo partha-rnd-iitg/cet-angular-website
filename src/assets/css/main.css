@@ -4724,7 +4724,7 @@ section,
 
 .faculty--staff .faculty-grid .faculty-card .faculty-info .department {
   font-size: 0.85rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 

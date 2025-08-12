@@ -13,17 +13,23 @@ import { PrincipalInvestigatorsComponent } from './pages/about/principal-investi
 
 export const routes: Routes = [
     { path: '', component: HomepageComponent },
-    // { path: 'about-us', component: AboutComponent },
-    { path: 'about/hoc', component: HocComponent },
-    { path: 'about/office-team', component: OfficeStaffComponent },
-    { path: 'about/project-team', component: ProjectStaffComponent },
-    { path: 'about/principal-investigators', component: PrincipalInvestigatorsComponent },
+    {
+        path: 'staff',
+        children: [
+            { path: 'hoc', component: HocComponent },
+            { path: 'office-team', component: OfficeStaffComponent },
+            { path: 'project-team', component: ProjectStaffComponent },
+            { path: 'principal-investigators', component: PrincipalInvestigatorsComponent }
+        ]
+    },
+    {
+        path: 'programs',
+        children: [
+            { path: 'nptel', component: NptelComponent },
+            { path: 'gian', component: GianComponent },
+            { path: 'coursera', component: CourseraComponent },
+        ]
+    },
 
-    // Programs
-    { path: 'programs/nptel', component: NptelComponent },
-    { path: 'programs/gian', component: GianComponent },
-    { path: 'programs/coursera', component: CourseraComponent },
-
-    // Contact
     { path: 'contact', component: ContactComponent },
 ];

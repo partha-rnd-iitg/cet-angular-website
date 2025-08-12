@@ -1,0 +1,14 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  min-height: 100vh;       /* Full viewport height */
+  display: flex;
+  flex-direction: column;  /* Stack header, main, footer vertically */
+}
+
+.app-main {
+  flex: 1;                 /* Push footer to bottom if content is short */
+}

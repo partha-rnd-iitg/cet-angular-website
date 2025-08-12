@@ -5999,7 +5999,7 @@ section,
 
 .blog-details .article-wrapper {
   display: grid;
-  grid-template-columns: minmax(200px, 300px) 1fr;
+  grid-template-columns: 1fr;
   gap: 3rem;
   position: relative;
 }

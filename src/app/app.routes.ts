@@ -10,16 +10,19 @@ import { OfficeStaffComponent } from './pages/about/office-staff/office-staff.co
 import { ProjectStaffComponent } from './pages/about/project-staff/project-staff.component';
 import { HocComponent } from './pages/about/hoc/hoc.component';
 import { PrincipalInvestigatorsComponent } from './pages/about/principal-investigators/principal-investigators.component';
+import { NewsComponent } from './pages/news/news.component';
 
 export const routes: Routes = [
     { path: '', component: HomepageComponent },
+    { path: 'news', component: NewsComponent },
     {
         path: 'staff',
         children: [
             { path: 'hoc', component: HocComponent },
             { path: 'office-team', component: OfficeStaffComponent },
             { path: 'project-team', component: ProjectStaffComponent },
-            { path: 'principal-investigators', component: PrincipalInvestigatorsComponent }
+            { path: 'principal-investigators', component: PrincipalInvestigatorsComponent },
+            { path: 'contact', component: ContactComponent },
         ]
     },
     {
@@ -29,7 +32,5 @@ export const routes: Routes = [
             { path: 'gian', component: GianComponent },
             { path: 'coursera', component: CourseraComponent },
         ]
-    },
-
-    { path: 'contact', component: ContactComponent },
+    }
 ];

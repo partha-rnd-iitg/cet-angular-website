@@ -1,0 +1,36 @@
+<div *ngIf="article">
+      <section id="events-extended" class="events-extended section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Events List -->
+                    <div class="events-list">
+                                <div class="event-item" data-aos="fade-up">
+                                    <!-- Event Date -->
+                                    <div class="event-date">
+                                        <span class="day">{{ article.day }}</span>
+                                        <span class="month">{{ article.month }}</span>
+                                    </div>
+                                    <div class="event-content">
+                                        <h3 class="event-title">{{ article.title }}</h3>
+                                        <!-- Meta Info -->
+                                        <div class="event-meta">
+                                        <span><i class="bi bi-clock"></i> {{ article.time }}</span>
+                                        <span><i class="bi bi-geo-alt"></i> {{ article.location }}</span>
+                                        </div>
+
+                                        <!-- Short Description -->
+                                        <p class="event-description">
+                                        {{ article.fullDescription }}
+                                        </p>
+
+                                        <!-- Learn More Button -->
+                                    </div>
+                                </div>
+                        </div> 
+                    </div>
+                    <!-- End Events List -->
+                </div>
+            </div>
+    </section>
+</div>

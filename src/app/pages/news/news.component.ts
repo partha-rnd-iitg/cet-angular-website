@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NEWS_ARTICLES, NewsArticle } from "./news-data"
+import { NEWS_ARTICLES_DATA, NewsArticle } from "./news-data"
 import { NgFor } from '@angular/common';
 
 @Component({
@@ -11,5 +11,5 @@ import { NgFor } from '@angular/common';
   styleUrl: './news.component.css'
 })
 export class NewsComponent {
-  newsArtcileArray : NewsArticle[] = NEWS_ARTICLES;
+  newsArtcileArray : NewsArticle[] = NEWS_ARTICLES_DATA;
 }

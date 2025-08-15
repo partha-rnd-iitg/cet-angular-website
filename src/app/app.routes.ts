@@ -11,10 +11,12 @@ import { ProjectStaffComponent } from './pages/about/project-staff/project-staff
 import { HocComponent } from './pages/about/hoc/hoc.component';
 import { PrincipalInvestigatorsComponent } from './pages/about/principal-investigators/principal-investigators.component';
 import { NewsComponent } from './pages/news/news.component';
+import { NewsDetailsComponent } from './pages/news/news-details/news-details.component';
 
 export const routes: Routes = [
     { path: '', component: HomepageComponent },
     { path: 'news', component: NewsComponent },
+    { path: 'news/:id', component: NewsDetailsComponent },
     {
         path: 'staff',
         children: [

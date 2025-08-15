@@ -7,24 +7,25 @@
                     <div class="events-list">
                                 <div class="event-item" data-aos="fade-up">
                                     <!-- Event Date -->
-                                    <div class="event-date">
-                                        <span class="day">{{ article.day }}</span>
-                                        <span class="month">{{ article.month }}</span>
-                                    </div>
-                                    <div class="event-content">
-                                        <h3 class="event-title">{{ article.title }}</h3>
-                                        <!-- Meta Info -->
-                                        <div class="event-meta">
-                                        <span><i class="bi bi-clock"></i> {{ article.time }}</span>
-                                        <span><i class="bi bi-geo-alt"></i> {{ article.location }}</span>
+                                    
+                                    <div class="row">
+                                        <div class="event-date">
+                                            <span class="day">{{ article.title }}</span>
                                         </div>
+                                        <div class="event-content">
+                                            
+                                            <!-- Meta Info -->
+                                            <div class="event-meta">
+                                            <span><i class="bi bi-calendar-date"></i> {{ article.day }} {{ article.month }}</span>
+                                            <span><i class="bi bi-clock"></i> {{ article.time }}</span>
+                                            <span><i class="bi bi-geo-alt"></i> {{ article.location }}</span>
+                                            </div>
 
-                                        <!-- Short Description -->
-                                        <p class="event-description">
-                                        {{ article.fullDescription }}
-                                        </p>
-
-                                        <!-- Learn More Button -->
+                                            <!-- Short Description -->
+                                            <p class="event-description">
+                                            {{ article.fullDescription }}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                         </div> 

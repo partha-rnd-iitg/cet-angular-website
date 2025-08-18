@@ -1,0 +1,74 @@
+<main>
+    <div class="page-title light-background">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">News</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a routerLink="/">Home</a></li>
+                    <li class="current">News</li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <section id="events-extended" class="events-extended section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Events List -->
+                    <div class="events-list">
+                        <div class="row">
+                            <div class="col-lg-12"*ngFor="let article of newsArtcileArray; let i = index" >
+                                <div class="event-item" data-aos="fade-up" [attr.data-aos-delay]="100 * (i+1)">
+                                    <!-- Event Date -->
+                                    <div class="event-date">
+                                        <span class="day">{{ article.day }}</span>
+                                        <span class="month">{{ article.month }}</span>
+                                    </div>
+                                    <div class="event-content">
+                                        <h3 class="event-title">{{ article.title }}</h3>
+
+                                        <!-- Meta Info -->
+                                        <div class="event-meta">
+                                        <span><i class="bi bi-clock"></i> {{ article.time }}</span>
+                                        <span><i class="bi bi-geo-alt"></i> {{ article.location }}</span>
+                                        </div>
+
+                                        <!-- Short Description -->
+                                        <p class="event-description">
+                                        {{ article.shortDescription }}
+                                        </p>
+
+                                        <!-- Learn More Button -->
+                                        <a
+                                        [routerLink]="['/news', article.id]"
+                                        class="btn-event-details">Learn More <i class="bi bi-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div> 
+                    
+                        <!-- Pagination -->
+                        <div class="events-pagination" data-aos="fade-up" data-aos-delay="100">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled"><a class="page-link" href="#"><i
+                                            class="bi bi-arrow-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i
+                                            class="bi bi-arrow-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Events List -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
